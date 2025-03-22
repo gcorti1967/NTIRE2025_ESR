@@ -29,7 +29,7 @@ def select_model(args, device):
         model.load_state_dict(torch.load(model_path), strict=True)
     elif model_id == 56:
         from models.team56_PAEDN import PAEDN
-        name, data_range = f"Final_{(model_id):02}_PAEDN", 1.0
+        name, data_range = f"{(model_id):02}_PAEDN", 1.0
         model_path = './model_zoo/team56_PAEDN.pth'
         model = PAEDN()
         model.load_state_dict(torch.load(model_path), strict=True)
